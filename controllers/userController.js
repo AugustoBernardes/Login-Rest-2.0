@@ -5,6 +5,7 @@ require('dotenv').config()
 // ---------------------------------------------------
 
 let TOKEN = process.env.TOKEN_SECRET
+let PORT = process.env.PORT
 
 const homePage = (req,res) => { 
     res.render('home', {body:{}} )
@@ -32,7 +33,7 @@ const login = async (req,res) =>{
         if(userEmail == savedEmail && passwordAndUserMatch ){
             const token = jwt.sign({ email: savedEmail }, TOKEN);
             res.cookie('token', token, { maxAge: 10000, httpOnly: true });
-            res.redirect('https://rest-login-and-register.herokuapp.com/app')
+            res.redirect(`http://localhost:${PORT}/app`)
         }else{
             res.status(400)
             res.render('error', {message: `Email or Password incorrect try again!`})
@@ -82,6 +83,6 @@ const addUser = async (req,res) => {
 const app = (req,res) => { 
     res.render('app')
 }
-
+ 
 
 module.exports = {homePage , login, addUser, loadPage, app}
