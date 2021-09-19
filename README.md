@@ -28,7 +28,8 @@ Here have all the dependencies that you need to use it...
 # Observation
   Change the file(.env_sample) to .env, and complete using your own data.\
   Nodemon it's not necessary but if you want change the start to (nodemon app.js)\
-  And check if you have [Node](https://nodejs.org/en/).
+  And check if you have [Node](https://nodejs.org/en/).\
+  The heroku version don't have the token feature because i just added the token here on GitHub heroku version is the oldest version.
 
 # Design
 ![1Image](design/design1.png)
