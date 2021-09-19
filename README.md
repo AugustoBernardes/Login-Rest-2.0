@@ -1,7 +1,7 @@
 # Login-Rest-2.0
 ⚒This is the login rest 2.0 with templates and all working and running on heroku. The features added were ,
 the error sistem check if is a email, the password length is greater than 6 , and validate if already have 
-a user with this email. After this save the user and encrypt you password.
+a user with this email. After this save the user and encrypt you password.And adding the JWT token on cookies and cheking if is a logged user!
 # Dependencies
 
 Here have all the dependencies that you need to use it...
@@ -22,6 +22,8 @@ Here have all the dependencies that you need to use it...
   $ npm install nodemon
 
   $ npm install cookie-parser 
+  
+  $ npm install jsonwebtoken
   
 ```
 
