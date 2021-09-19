@@ -31,7 +31,9 @@ Here have all the dependencies that you need to use it...
   Change the file(.env_sample) to .env, and complete using your own data.\
   Nodemon it's not necessary but if you want change the start to (nodemon app.js)\
   And check if you have [Node](https://nodejs.org/en/).\
-  The heroku version don't have the token feature because i just added the token here on GitHub heroku version is the oldest version.
+  The heroku version don't have the token feature because i just added the token here on GitHub heroku version is the oldest version.\
+  On userController file at line 36 have this code (res.redirect(`http://localhost:${PORT}/app`)) if you upload this project on heroku or some host
+  change the localhost to your URL. 
 
 # Design
 ![1Image](design/design1.png)
