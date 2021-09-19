@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body> 
+    <div class="container d-flex flex-column  bg-secondary p-3 rounded " style=" margin-top: 150px; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.705); max-width: 300px;">
+        <h2 class="text-center">Login</h2>
+        <form class="d-flex flex-column" action="/login" method="POST">
+            <input type="text" class="mb-2 text-center " name="email" required placeholder="Email" value='<%= body.email %>'>
+            <input type="password" class="mb-2 text-center " name="password" required placeholder="Password" value='<%= body.password %>'>
+            <button class="btn btn-primary ">Sign-in</button>
+            <a href="/register" class="btn btn-primary mt-2">Register</a>
+        </form>
+    </div>
+</body>
+</html>

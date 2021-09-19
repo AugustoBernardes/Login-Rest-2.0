@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Error</title>
+</head>
+<body>
+    <div class="container d-flex flex-column  mx-auto bg-secondary p-5" style="margin-top: 150px; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.705);">
+        <% if (message) { %>
+            <h2 class="text-center text-danger"><%= message %></h2>
+        <% }else{  %>
+            <h2 class="text-center text-danger">Happened a error !</h2>
+        <% } %>
+        <a href="/" class="btn btn-primary mt-2">Back</a>
+    </div>
+
+</body>
+</html>
