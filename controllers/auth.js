@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken')
 
-const TOKEN = process.env.TOKEN_SECRET
+const SECRET = process.env.TOKEN_SECRET
 
 module.exports = function (req,res,next){
     const token = req.cookies.token
@@ -10,7 +10,7 @@ module.exports = function (req,res,next){
         res.render('error', {message: `Acess denied.Login to access!`})
     }else{
         try {
-            const userVerified = jwt.verify(token,TOKEN)
+            const userVerified = jwt.verify(token,SECRET)
             req.user = userVerified
             next()
         } catch (error) {
