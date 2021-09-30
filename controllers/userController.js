@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config()
 // ---------------------------------------------------
 
-let TOKEN = process.env.TOKEN_SECRET
+let SECRET = process.env.TOKEN_SECRET
 let PORT = process.env.PORT
 
 const homePage = (req,res) => { 
@@ -31,7 +31,7 @@ const login = async (req,res) =>{
         
         const passwordAndUserMatch = bcrypt.compareSync(userPassword, savedPassword)
         if(userEmail == savedEmail && passwordAndUserMatch ){
-            const token = jwt.sign({ email: savedEmail }, TOKEN);
+            const token = jwt.sign({ email: savedEmail }, SECRET);
             res.cookie('token', token, { maxAge: 10000, httpOnly: true });
             res.redirect(`http://localhost:${PORT}/app`)
         }else{
